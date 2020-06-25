@@ -35,7 +35,7 @@ function returnHTMLStringWithin20Char() {
     let list = new NoteList();
     let view = new NoteListView(list);
     list.addNote("This is an awesome test for some long string");
-    expect.isTrue(view.returnHTML() === "<ul><li><div>This is an awesome te</div></li></ul>")
+    expect.isTrue(view.returnHTML() === "<ul><li><div>This is an awesome t</div></li></ul>")
    
 }
 returnHTMLStringWithin20Char();

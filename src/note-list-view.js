@@ -7,7 +7,7 @@
     NoteListView.prototype.returnHTML = function () {
         var array = this.frame.returnNote()
         var element = array.map(function(note) {
-            return note.text.substring(0, 21)
+            return note.text.substring(0, 20)
     
         });
        

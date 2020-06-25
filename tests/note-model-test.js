@@ -1,9 +1,11 @@
-function constructingWithTheGivenString() {
+
+function constructingWithTheGivenStringAndId() {
   let string = "My favorite language is JavaScript.";
-  let note = new Note(string);
+  let note = new Note(string); 
   expect.isTrue(note.text === string);
+  expect.isTrue(note.id === 0 );
 }
-constructingWithTheGivenString();
+constructingWithTheGivenStringAndId();
 
 function hasMethodToReturnText() {
   //this is it part of the describe/it
