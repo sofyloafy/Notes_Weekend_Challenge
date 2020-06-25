@@ -1,17 +1,14 @@
 
-
 (function (exports) {
 
-    function NoteController(noteListModel) {
-    //     noteListModel = new NoteList();
-    //     noteListModel.addNote("Favourite drink: seltzer");
+    function NoteController(notelist) {
+        this.noteListModel = notelist;
+        this.view = new NoteListView(this.noteListModel)
+    }
 
-    //     this.view = new NoteListView(noteListModel)
-    // }
-
-    // NoteController.prototype.getHTML = function () {
-    //     var ele = document.getElementById('app')
-    //     ele.innerHTML = this.view.returnHTML();
+    NoteController.prototype.getHTML = function () {
+        var ele = document.getElementById('app')
+        ele.innerHTML = this.view.returnHTML();
     }
 
 
