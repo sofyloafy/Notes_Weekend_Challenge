@@ -7,11 +7,12 @@
     NoteListView.prototype.returnHTML = function () {
         var array = this.frame.returnNote()
         var element = array.map(function(note) {
-            return note.text
+            console.log(note.text.slice(0, 19))
+            return note.text.slice(0, 19)
     
         });
-        console.log(element)
-        console.log("<ul><li><div>" + element.join("</div></li><li><div>") + "</div></li></ul>")
+        // console.log(element)
+        // console.log("<ul><li><div>" + element.join("</div></li><li><div>") + "</div></li></ul>")
 
         return "<ul><li><div>" + element.join("</div></li><li><div>") + "</div></li></ul>"
         
