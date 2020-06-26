@@ -33,7 +33,6 @@ function IdIncreaseWhenAddaNote() {
   let notelist = new NoteList();
       expect.isTrue(notelist.id === 0);
       notelist.addNote("anotherNote");
-      console.log(note);
       expect.isTrue(notelist.id === 1);
 }
 IdIncreaseWhenAddaNote();

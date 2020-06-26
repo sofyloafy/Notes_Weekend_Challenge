@@ -5,7 +5,7 @@ var expect = {
         "Expectation failed: " + expectationToCheck + " is not truthy"
       );
     } else {
-      console.log("Test function has passed");
+      console.log("Test function has passed👍✅");
     }
   },
 
@@ -15,7 +15,7 @@ var expect = {
         "Expectation Failed: " + expectationToCheck + " is not falsy"
       );
     } else {
-      console.log("Test function has passed");
+      console.log("Test function has passed 👍✅");
     }
   },
 };
