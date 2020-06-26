@@ -8,5 +8,9 @@
     return this.text;
   };
 
+  Note.prototype.returnID = function (){
+    return this.id;
+  }
+
   exports.Note = Note;
 })(this);

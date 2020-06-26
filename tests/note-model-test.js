@@ -13,3 +13,11 @@ function hasMethodToReturnText() {
   expect.isTrue(note.returnText() === string);
 }
 hasMethodToReturnText();
+
+
+function returnNoteID() {
+  let string = "Chris's idea!!";
+  let note = new Note(string,0);
+  expect.isTrue(note.returnID() === 0);
+}
+returnNoteID();
