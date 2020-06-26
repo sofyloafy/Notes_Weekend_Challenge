@@ -1,3 +1,4 @@
+
 function constructsWithAnEmptyArray() {
   let noteList = new NoteList();
   expect.isTrue(Array.isArray(noteList.notes));
@@ -23,7 +24,16 @@ function StoresInstancesOfNoteWhenAddingNewNote() {
   let noteList = new NoteList();
   noteList.addNote("note");
   noteList.addNote("anotherNote");
-  expect.isTrue(noteList.returnNote()[0].text === "note");
-  expect.isTrue(noteList.returnNote()[1].text === "anotherNote");
+  expect.isTrue(noteList.returnNote()[0].returnText() === "note");
+  expect.isTrue(noteList.returnNote()[1].returnText() === "anotherNote");
 }
 StoresInstancesOfNoteWhenAddingNewNote();
+
+function IdIncreaseWhenAddaNote() {
+  let notelist = new NoteList();
+      expect.isTrue(notelist.id === 0);
+      notelist.addNote("anotherNote");
+      console.log(note);
+      expect.isTrue(notelist.id === 1);
+}
+IdIncreaseWhenAddaNote();
