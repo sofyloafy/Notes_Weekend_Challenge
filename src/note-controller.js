@@ -8,7 +8,7 @@
 
     NoteController.prototype.getHTML = function () {
         var ele = document.getElementById('app')
-        ele.innerHTML = this.view.returnHTML();
+            ele.innerHTML = this.view.returnHTML();
     }
 
 

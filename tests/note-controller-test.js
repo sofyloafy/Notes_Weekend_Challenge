@@ -11,9 +11,8 @@ function checkInnerHTMLPropertyValue() {
        notelist.addNote("Favourite food: pesto");
    let view = new NoteController(notelist); 
    view.getHTML(); 
-   let string = "<ul><li><div>Favourite food: pest</div></li></ul>"
+   let string = `<ul><a href="#0"><li><div> Favourite food: pest</div></li></a></ul>`
    
    expect.isTrue(document.getElementById('app').innerHTML === string)
 }
-
 checkInnerHTMLPropertyValue();
