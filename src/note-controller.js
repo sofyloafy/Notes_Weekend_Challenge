@@ -11,8 +11,12 @@
             ele.innerHTML = this.view.returnHTML();
     }
 
-
     exports.NoteController = NoteController;
 })(this);
 
 
+
+    window.addEventListener("hashchange", function(event) {
+        var id = window.location.hash.split('#')[1]
+     
+ 

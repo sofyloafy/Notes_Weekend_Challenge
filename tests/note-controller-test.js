@@ -16,3 +16,5 @@ function checkInnerHTMLPropertyValue() {
    expect.isTrue(document.getElementById('app').innerHTML === string)
 }
 checkInnerHTMLPropertyValue();
+
+
