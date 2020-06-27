@@ -4,6 +4,8 @@
     function NoteController(Notelist) {
         this.noteListModel = Notelist;
         this.noteListModel.addNote('It is FRIDAY');
+        this.noteListModel.addNote('It is SATURDAY');
+
 
         this.view = new NoteListView(this.noteListModel)
     }
