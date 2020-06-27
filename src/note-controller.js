@@ -6,7 +6,6 @@
         this.view = new NoteListView(this.noteListModel)
     }
 
-
     NoteController.prototype.getHTML = function () {
         const app = document.getElementById('app')
         let newNote = document.createElement('div')
@@ -17,13 +16,14 @@
     exports.NoteController = NoteController;
 })(this);
 
+
     window.addEventListener('submit', function(event){
         event.preventDefault();
         var textEvent = (event.target[0].value)
-        // var list = new NoteList();
-        var controller = new NoteController();
-        console.log(controller.notelist)
-        controller.noteList.addNote(textEvent)
+        var list = new NoteList();
+        var controller = new NoteController(list);
+        controller.noteListModel.addNote(textEvent)
+        console.log(controller)
         controller.getHTML();
         console.log(controller.noteListModel.returnNote()[0].text);
         return textEvent
