@@ -3,31 +3,48 @@
 
     function NoteController(Notelist) {
         this.noteListModel = Notelist;
-        this.noteListModel.addNote('It is FRIDAY');
-        this.noteListModel.addNote('It is SATURDAY');
-
-
         this.view = new NoteListView(this.noteListModel)
     }
 
+
     NoteController.prototype.getHTML = function () {
-        var ele = document.getElementById('app')
-            ele.innerHTML = this.view.returnHTML();
+        const app = document.getElementById('app')
+        let newNote = document.createElement('div')
+            newNote.innerHTML = this.view.returnHTML();
+            app.appendChild(newNote)
     }
 
     exports.NoteController = NoteController;
 })(this);
 
-    window.addEventListener('DOMContentLoaded', function(event){
-        var list = new NoteList();
-        var controller = new NoteController(list);
+    window.addEventListener('submit', function(event){
+        event.preventDefault();
+        var textEvent = (event.target[0].value)
+        // var list = new NoteList();
+        var controller = new NoteController();
+        console.log(controller.notelist)
+        controller.noteList.addNote(textEvent)
         controller.getHTML();
+        console.log(controller.noteListModel.returnNote()[0].text);
+        return textEvent
+
+    })
+
+
+    // window.addEventListener('DOMContentLoaded', function(event){
+    //     var list = new NoteList();
+    //     var controller = new NoteController(list);
+    //     controller.getHTML();
 
     window.addEventListener("hashchange", function(event) {
+        var list = new NoteList();
+        var controller = new NoteController(list);
         var id = window.location.hash.split('#')[1]
+        console.log(window.location.hash)
+        console.log(controller.noteListModel)
         var note = controller.noteListModel.returnNote()[id]
-        var singleNoteView = new SingleNoteView(note)
-        var html = singleNoteView.returnView()
-        this.document.getElementById('app').innerHTML = html
-    })
+        // var singleNoteView = new SingleNoteView(note)
+        // var html = singleNoteView.returnView()
+
     });
+    // });

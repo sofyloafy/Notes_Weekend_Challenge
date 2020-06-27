@@ -6,6 +6,7 @@
 
   NoteList.prototype.addNote = function (note, id=this.id) {
     this.notes.push(new Note(note, id));
+    console.log(this.notes)
     this.id ++
   };
 

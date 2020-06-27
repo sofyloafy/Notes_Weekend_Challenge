@@ -4,9 +4,13 @@
 <head>
   <meta charset="utf-8">
 </head>
-
-<body>
-  <div id='app'>hello</div>
+<form id='text' action='/#note-submitted'>
+Add a note:
+<input type='textarea'><br><br>
+<input type='submit' class='button'>
+</form>
+<body><br><br>
+  <div id='app'>Your notes:</div>
   <script src="src/note-controller.js"></script>
   <script src="src/note-list-model.js"></script>
   <script src="src/note-list-view.js"></script>
